@@ -1,13 +1,13 @@
 #include <Python.h>
 
-void print_python_list(PyObject *p);
-void print_python_bytes(PyObject *p);
+void custom_print_python_list(PyObject *p);
+void custom_print_python_bytes(PyObject *p);
 
 /**
- * print_python_list - Prints basic info about Python lists.
+ * custom_print_python_list - Prints customized info about Python lists.
  * @p: A PyObject list object.
  */
-void print_python_list(PyObject *p)
+void custom_print_python_list(PyObject *p)
 {
     int size, alloc, i;
     const char *type;
@@ -17,44 +17,44 @@ void print_python_list(PyObject *p)
     size = var->ob_size;
     alloc = list->allocated;
 
-    printf("[*] Python list info\n");
-    printf("[*] Size of the Python List = %d\n", size);
-    printf("[*] Allocated = %d\n", alloc);
+    printf("[*] Custom Python list info\n");
+    printf("[*] Custom Size of the Python List = %d\n", size);
+    printf("[*] Custom Allocated = %d\n", alloc);
 
     for (i = 0; i < size; i++)
     {
         type = list->ob_item[i]->ob_type->tp_name;
-        printf("Element %d: %s\n", i, type);
+        printf("Custom Element %d: %s\n", i, type);
         if (strcmp(type, "bytes") == 0)
-            print_python_bytes(list->ob_item[i]);
+            custom_print_python_bytes(list->ob_item[i]);
     }
 }
 
 /**
- * print_python_bytes - Prints basic info about Python byte objects.
+ * custom_print_python_bytes - Prints customized info about Python byte objects.
  * @p: A PyObject byte object.
  */
-void print_python_bytes(PyObject *p)
+void custom_print_python_bytes(PyObject *p)
 {
     unsigned char i, size;
     PyBytesObject *bytes = (PyBytesObject *)p;
 
-    printf("[.] bytes object info\n");
+    printf("[.] Custom bytes object info\n");
     if (strcmp(p->ob_type->tp_name, "bytes") != 0)
     {
-        printf("  [ERROR] Invalid Bytes Object\n");
+        printf("  [ERROR] Custom Invalid Bytes Object\n");
         return;
     }
 
-    printf("  size: %ld\n", ((PyVarObject *)p)->ob_size);
-    printf("  trying string: %s\n", bytes->ob_sval);
+    printf("  Custom size: %ld\n", ((PyVarObject *)p)->ob_size);
+    printf("  Custom trying string: %s\n", bytes->ob_sval);
 
     if (((PyVarObject *)p)->ob_size > 10)
         size = 10;
     else
         size = ((PyVarObject *)p)->ob_size + 1;
 
-    printf("  first %d bytes: ", size);
+    printf("  Custom first %d bytes: ", size);
     for (i = 0; i < size; i++)
     {
         printf("%02hhx", bytes->ob_sval[i]);

@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 def weight_average(my_list=[]):
-    if my_list is None:
+    if not my_list:
         return 0
     s1 = sum(i[1] for i in my_list)
     s2 = sum(map(lambda x: x[0] * x[1], my_list))

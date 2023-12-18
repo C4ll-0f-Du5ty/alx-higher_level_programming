@@ -2,7 +2,6 @@
 def safe_print_list_integers(my_list=[], x=0):
     counter = 0
     g = 0
-    
     while g < x:
         try:
             print("{:d}".format(my_list[g]), end="")

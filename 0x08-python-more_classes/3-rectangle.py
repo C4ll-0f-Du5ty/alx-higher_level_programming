@@ -50,7 +50,7 @@ class Rectangle:
         counter = 0
         for _ in range(self.height):
             counter += 1
-            result += (('#' * self.width)
-            + ('\n' if (counter) - self.height != 0 else ""))
+            result += (('#' * self.width) +
+                       ('\n' if (counter) - self.height != 0 else ""))
 
         return result

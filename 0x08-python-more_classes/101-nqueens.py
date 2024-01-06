@@ -3,7 +3,8 @@
 #     def can_place(pos, ocuppied_positions):
 #         for i in range(ocuppied_positions):
 #             if pos[i] == pos[ocuppied_positions] or \
-#                 pos[i] - pos[ocuppied_positions] == i - ocuppied_positions or \
+#                 pos[i] - pos[ocuppied_positions] ==
+#                   i - ocuppied_positions or \
 #                 pos[i] - pos[ocuppied_positions] == ocuppied_positions - i:
 #                 return False
 #         return True
@@ -26,6 +27,7 @@
 
 import sys
 
+
 def is_safe(board, row, col, n):
     for i in range(row):
         if board[i] == col or \
@@ -33,6 +35,7 @@ def is_safe(board, row, col, n):
            board[i] + i == col + row:
             return False
     return True
+
 
 def solve_nqueens(board, row, n, solutions):
     if row == n:
@@ -43,9 +46,11 @@ def solve_nqueens(board, row, n, solutions):
             board[row] = col
             solve_nqueens(board, row + 1, n, solutions)
 
+
 def print_solutions(solutions):
     for solution in solutions:
         print(solution)
+
 
 def main():
     if len(sys.argv) != 2:
@@ -65,8 +70,10 @@ def main():
     board = [-1] * n
     solutions = []
     solve_nqueens(board, 0, n, solutions)
+
     print_solutions(solutions)
 
-if __name__ == "__main__":
-    main()
 
+if __name__ == "__main__":
+
+    main()

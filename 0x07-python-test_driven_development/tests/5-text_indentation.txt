@@ -1,0 +1,22 @@
+>>> text = __import__('5-text_indentation').text_indentation
+
+>>> text("Hello, how are you? I hope you're doing well. Have a great day!")
+Hello, how are you?
+<BLANKLINE>
+I hope you're doing well.
+<BLANKLINE>
+Have a great day!
+
+>>> text("This is a test: Does it work? Let's see.")
+This is a test:
+<BLANKLINE>
+Does it work?
+<BLANKLINE>
+Let's see.
+<BLANKLINE>
+
+>>> text("What's your name? My name is Bing.")
+What's your name?
+<BLANKLINE>
+My name is Bing.
+<BLANKLINE>

@@ -10,9 +10,10 @@ class MyList(list):
     """
     def __init__(self):
         super().__init__()
+        for item in self:
+           if not isinstance(item, int):
+               raise TypeError("All items in the list must be integers.")
 
-    for l in list:
-        if not isinstance(l, int):
-            raise TypeError
+    
     def print_sorted(self):
         print(sorted(self))

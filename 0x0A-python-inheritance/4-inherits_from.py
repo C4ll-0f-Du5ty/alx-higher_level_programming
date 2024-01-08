@@ -9,4 +9,4 @@ def inherits_from(obj, a_class):
         on the provided object if it an
         instnace of the provided class
     """
-    return not (type(obj) is a_class)
+    return not (type(obj) == a_class)

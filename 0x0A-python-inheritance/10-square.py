@@ -4,10 +4,10 @@
 
 
 module = __import__('9-rectangle')
-rectangle = getattr(module, 'Rectangle')
+Rectangle = getattr(module, 'Rectangle')
 
 
-class Square(rectangle):
+class Square(Rectangle):
     """new class to set some
     attributes
 """

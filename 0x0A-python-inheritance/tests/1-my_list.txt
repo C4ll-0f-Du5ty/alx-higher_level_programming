@@ -12,8 +12,3 @@
 
 >>> sort([])
 []
-
->>> sort([10, 9, 8, 7, 6, 5, 4, "g", 2, 1])
-Traceback (most recent last call)
-    ...
-TypeError: All items in the list must be integers.

@@ -11,5 +11,8 @@ class MyList(list):
     def __init__(self):
         super().__init__()
 
+    for l in list:
+        if not isinstance(l, int):
+            raise TypeError
     def print_sorted(self):
         print(sorted(self))

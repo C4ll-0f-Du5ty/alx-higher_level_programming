@@ -5,6 +5,8 @@
 
 module = __import__('7-base_geometry')
 BaseGeometry = getattr(module, 'BaseGeometry')
+
+
 class Rectangle(BaseGeometry):
     """new class to set some
     attributes
@@ -14,4 +16,3 @@ class Rectangle(BaseGeometry):
         self.integer_validator(width, height)
         self.__width = width
         self.__height = height
-

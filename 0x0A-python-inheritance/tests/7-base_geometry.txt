@@ -1,0 +1,17 @@
+>>> integer = __import__('7-base_geometry').BaseGeometry.integer_validator
+>>> area = __import__('7-base_geometry').BaseGeometry.area
+
+>>> area()
+Traceback (most recent call last):
+...
+Exception: area() is not implemented
+
+>>> integer("test", "not an integer")
+Traceback (most recent call last):
+...
+TypeError: test must be an integer
+
+>>> integer("test", -1)
+Traceback (most recent call last):
+...
+TypeError: (f"{name} must be an integer")

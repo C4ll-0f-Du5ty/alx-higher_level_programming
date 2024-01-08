@@ -2,15 +2,15 @@
 >>> integer = base_geometry.integer_validator
 >>> a = base_geometry.area
 
->>> integer("gg", -33)
+>>> integer("Wrong", -33)
 Traceback (most recent call last):
 ...
-ValueError: gg must be greater than 0
+ValueError: Wrong must be greater than 0
 
->>> integer("gg", "Bob")
+>>> integer("Wrong", "Bob")
 Traceback (most recent call last):
 ...
-TypeError: gg must be an integer
+TypeError: Wrong must be an integer
 
 >>> a()
 Traceback (most recent call last):

@@ -8,6 +8,4 @@ def is_same_class(obj, a_class):
     on the provided object if it an
     instnace of the provided class
 """
-    if isinstance(type(obj), a_class):
-        return True
-    return False
+    return type(obj) is a_class

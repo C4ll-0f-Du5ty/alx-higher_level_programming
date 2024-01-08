@@ -7,6 +7,8 @@ def text_indentation(text):
     """Function to modify a string depending on
     a given delimeters and display the changes
     """
+    if text is None:
+        raise TypeError("text must be a string")
     flag = False
     if not isinstance(text, str):
         raise TypeError("text must be a string")

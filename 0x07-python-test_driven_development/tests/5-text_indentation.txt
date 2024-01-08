@@ -20,3 +20,12 @@ What's your name?
 <BLANKLINE>
 My name is Bing.
 <BLANKLINE>
+
+>>> text("Holberton. School? How are you: John")
+Holberton.
+<BLANKLINE>
+School?
+<BLANKLINE>
+How are you:
+<BLANKLINE>
+John

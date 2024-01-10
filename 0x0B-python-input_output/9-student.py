@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Student module to Json"""
 
+
 class Student:
     """retrieves a dictionary representation of a Student instance"""
     first_name = ""

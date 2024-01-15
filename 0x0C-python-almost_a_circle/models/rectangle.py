@@ -1,7 +1,10 @@
 #!/usr/bin/python3
 from models.base import Base
+"""A new Module called Rectangle"""
+
 
 class Rectangle(Base):
+    """declaring some attributes in the class"""
 
     def __init__(self, width, height, x=0, y=0, id=None):
         super().__init__(id)
@@ -41,4 +44,3 @@ class Rectangle(Base):
     @y.setter
     def y(self, value):
         self.__y = value
-

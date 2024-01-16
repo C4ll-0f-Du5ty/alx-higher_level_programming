@@ -52,6 +52,7 @@ class Square(Rectangle):
                 self.y = args[3]
 
     def to_dictionary(self):
+        """Presenting  the attributes as a key with its values"""
         return {
             'id': self.id, 'size': self.width,
             'x': self.x, 'y': self.y

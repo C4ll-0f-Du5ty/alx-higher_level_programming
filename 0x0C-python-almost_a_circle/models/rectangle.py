@@ -110,6 +110,7 @@ class Rectangle(Base):
                 self.y = args[4]
 
     def to_dictionary(self):
+        """Presenting  the attributes as a key with its values"""
         return {'x': self.x, 'y': self.y, 'id': self.id,
                 'width': self.width, 'height': self.height
                 }

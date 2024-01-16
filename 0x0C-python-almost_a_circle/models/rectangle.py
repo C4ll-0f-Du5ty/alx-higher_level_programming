@@ -86,17 +86,17 @@ class Rectangle(Base):
         """updating my class attributes!
         using both Key wards as in {kwargs}
         and using the instance attribute"""
-        if kwargs:
+        if len(args) == 0:
             if "width" in kwargs:
                 self.width = kwargs["width"]
             if "height" in kwargs:
-                self.width = kwargs["height"]
+                self.height = kwargs["height"]
             if "id" in kwargs:
-                self.width = kwargs["id"]
+                self.id = kwargs["id"]
             if "x" in kwargs:
-                self.width = kwargs["x"]
+                self.x = kwargs["x"]
             if "y" in kwargs:
-                self.width = kwargs["y"]
+                self.y = kwargs["y"]
         else:
             if len(args) >= 1:
                 self.id = args[0]

@@ -74,7 +74,5 @@ class Rectangle(Base):
 
     def __str__(self):
         """a method to be called when we print our instance!"""
-        return (
-            f"[Rectangle] ({self.id}) {self.x}/{self.y}"
-            f"- {self.width}/{self.height}"
-        )
+        return (f"[Rectangle] ({self.id}) {self.x}/{self.y}"
+                f" - {self.width}/{self.height}")

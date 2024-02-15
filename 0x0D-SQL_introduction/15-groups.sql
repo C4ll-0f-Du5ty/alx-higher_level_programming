@@ -1,5 +1,5 @@
 -- Counting the Presence
 SELECT score,
-    COUNT(*) as "number"
+    COUNT(*) AS "number"
 FROM second_table
 GROUP BY score;

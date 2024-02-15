@@ -1,1 +1,2 @@
-DROP TABLE IF EXISTS first_table;
+DELETE FROM first_table
+WHERE id = 89;

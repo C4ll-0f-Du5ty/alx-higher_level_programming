@@ -1,2 +1,2 @@
---Displaying all DataBases of my Server
+-- Displaying all DataBases of my Server.
 SHOW DATABASES;

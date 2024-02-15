@@ -1,2 +1,2 @@
-DELETE FROM first_table
-WHERE id = 89;
+SELECT *
+FROM second_table;

@@ -1,5 +1,5 @@
 #!/usr/bin/node
-function sort (arr) {
+function sort(arr) {
   for (let i = 0; i < arr.length; i++) {
     let temp = i;
     for (let j = i; j < arr.length; j++) {
@@ -12,7 +12,7 @@ function sort (arr) {
     arr[temp] = c;
   }
 }
-const g = process.argv.slice(2);
+const g = process.argv.slice(2).map(Number);
 if (g.length === 0 || g.length === 1) {
   console.log(0);
 } else {

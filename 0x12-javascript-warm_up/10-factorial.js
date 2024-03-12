@@ -1,15 +1,11 @@
 #!/usr/bin/node
-function factorial (x, y) {
-  if (y > 1) {
-    return factorial(x * (y - 1), y - 1);
-  } else {
-    return x;
+function factorial(x) {
+  if (x === 0 || isNaN(x)) {
+    return 1;
   }
+  return x * factorial(x - 1)
 }
 
 const g = process.argv.slice(2);
-if (g[0] === undefined) {
-  console.log(1);
-} else {
-  console.log(factorial(parseInt(g[0]), parseInt(g[0])));
-}
+console.log(factorial(parseInt(g[0])));
+

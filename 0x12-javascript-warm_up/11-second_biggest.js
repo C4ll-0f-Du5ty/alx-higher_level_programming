@@ -1,14 +1,21 @@
 #!/usr/bin/node
+function sort (arr) {
+  for (let i = 0; i < arr.length; i++) {
+    let temp = i;
+    for (let j = i; j < arr.length; j++) {
+      if (arr[j] > arr[temp]) {
+        temp = j;
+      }
+    }
+    const c = arr[i];
+    arr[i] = arr[temp];
+    arr[temp] = c;
+  }
+}
 const g = process.argv.slice(2);
 if (g.length === 0 || g.length === 1) {
   console.log(0);
 } else {
-  const m = Math.max(...g);
-  let k = g[0];
-  for (let i = 0; i < g.length; i++) {
-    if (g[i] < m && g[i] > k) {
-      k = g[i];
-    }
-  }
-  console.log(k);
+  sort(g);
+  console.log(g[1]);
 }

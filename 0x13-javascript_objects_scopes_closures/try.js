@@ -1,11 +1,3 @@
 #!/usr/bin/node
-class Rectangle {
-    // constructor(width, height) {
-    //     this.height = height;
-    //     this.width = width;
-    // }
-    constructor() { }
-}
-
-const r = new Rectangle();
-console.log(r.constructor);
+counter = 5;
+console.log(`${counter}gg`);

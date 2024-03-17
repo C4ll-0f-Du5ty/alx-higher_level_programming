@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""A script to list the Data from a given Database Using A given user"""
 import MySQLdb
 import sys
 

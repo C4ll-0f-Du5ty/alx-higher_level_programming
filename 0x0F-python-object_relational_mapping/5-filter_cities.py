@@ -11,7 +11,8 @@ if __name__ == "__main__":
     cursor.execute("SELECT GROUP_CONCAT(cities.name SEPARATOR ', ')\
                     FROM cities INNER JOIN states ON \
                     states.id = cities.state_id \
-                    WHERE states.name = %s", (sys.argv[4], ))
+                    WHERE states.name = %s \
+                    ORDER BY cities.id ASC", (sys.argv[4], ))
 
     rows = cursor.fetchall()
     for row in rows:

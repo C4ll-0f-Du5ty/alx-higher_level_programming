@@ -17,7 +17,7 @@ if __name__ == "__main__":
     rows = cursor.fetchall()
     for row in rows:
         if row[0] is not None:
-            print(row)
+            print(row[0])
         else:
             print()
 

@@ -8,7 +8,7 @@ if __name__ == "__main__":
                          passwd=sys.argv[2], db=sys.argv[3], port=3306)
 
     cursor = db.cursor()
-    cursor.execute("select * from states where name = %s Order by id ASC", (sys.argv[4],))
+    cursor.execute("select * from states where name = '{}' ORDER BY id ASC".format(sys.argv[4]))
 
     rows = cursor.fetchall()
 

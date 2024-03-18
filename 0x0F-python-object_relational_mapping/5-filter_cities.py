@@ -16,6 +16,9 @@ if __name__ == "__main__":
 
     rows = cursor.fetchall()
     for row in rows:
-        print(row)
+        if row[0] is not None:
+            print(row)
+        else:
+            print()
 
     db.close()

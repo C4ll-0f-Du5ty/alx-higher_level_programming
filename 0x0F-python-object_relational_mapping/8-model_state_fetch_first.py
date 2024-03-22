@@ -14,6 +14,9 @@ if __name__ == "__main__":
     Session = sessionmaker(engine)
     session = Session()
     Results = session.query(State).filter(State.id == 1)
-    for i in Results:
-        print(f"{i.id}: {i.name}")
+    if Results is None:
+        print("Nothing")
+    else:
+        for i in Results:
+            print(f"{i.id}: {i.name}")
     session.close()

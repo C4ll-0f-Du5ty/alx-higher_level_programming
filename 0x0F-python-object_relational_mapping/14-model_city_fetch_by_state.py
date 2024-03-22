@@ -14,7 +14,8 @@ if __name__ == "__main__":
     Base.metadata.create_all(engine)
     session = Session()
     results = session.query(State, City)\
-                     .filter(State.id == City.state_id)
+                     .filter(State.id == City.state_id)\
+                     .order_by(City.id.asc())
     for r in results:
-        print(f"{r.State.name}: ({r.State.id}) {r.City.name}")
+        print(f"{r.State.name}: ({r.City.id}) {r.City.name}")
     session.close()

@@ -16,3 +16,4 @@ if __name__ == '__main__':
                      .order_by(State.id)
     for i in results:
         print(f"{i.id}: {i.name}")
+    session.close()

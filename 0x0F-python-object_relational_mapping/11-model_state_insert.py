@@ -14,7 +14,7 @@ if __name__ == "__main__":
     Session = sessionmaker(engine)
     Base.metadata.create_all(engine)
     session = Session()
-    newState = State(name = "Louisiana")
+    newState = State(name="Louisiana")
     session.add(newState)
     session.commit()
     results = session.query(State).filter(State.name == newState.name).all()

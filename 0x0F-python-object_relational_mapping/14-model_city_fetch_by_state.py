@@ -15,7 +15,7 @@ if __name__ == "__main__":
     session = Session()
     results = session.query(State.id, State.name, City.name)\
                      .join(State, City.state_id == State.id)\
-                     .order_by(City.id.asc()).all()
+                     .order_by(City.id.asc())
     for r in results:
         print(f"{r[1]}: ({r[0]}) {r[2]}")
     session.close()

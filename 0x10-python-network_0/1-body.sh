@@ -1,3 +1,3 @@
 #!/bin/bash
-# Getting the body of the response
-curl -sL "$1"
+# Getting the body of the response (-X)=> for Method, (-L)=> for escaping the redirections and going for the final page
+curl -sX GET "$1" -L 200

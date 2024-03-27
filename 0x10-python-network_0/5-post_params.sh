@@ -1,0 +1,3 @@
+#!/bin/bash
+# sending a request with a method along with assigning headers using -H
+curl -sX POST -d "email: test@gmail.com" -d "subject: I will always be here for PLD" "$1"

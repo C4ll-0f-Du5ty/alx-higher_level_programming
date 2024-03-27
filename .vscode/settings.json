@@ -58,5 +58,21 @@
   "C_Cpp_Runner.msvcSecureNoWarnings": false,
   "files.associations": {
     "stdio.h": "c"
-  }
+  },
+  "sqltools.connections": [
+    {
+      "mysqlOptions": {
+        "authProtocol": "default",
+        "enableSsl": "Disabled"
+      },
+      "previewLimit": 50,
+      "server": "localhost",
+      "port": 3306,
+      "driver": "MySQL",
+      "database": "hbtn_0c_0",
+      "name": "f",
+      "username": "Test",
+      "password": "Allem@2001"
+    }
+  ]
 }

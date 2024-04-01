@@ -7,7 +7,7 @@ import sys
 from urllib import parse, request
 
 url = sys.argv[1]
-value = {'email' : sys.argv[2]}
+value = {'email': sys.argv[2]}
 data = parse.urlencode(value)
 data = data.encode('ascii')
 req = request.Request(url, data)

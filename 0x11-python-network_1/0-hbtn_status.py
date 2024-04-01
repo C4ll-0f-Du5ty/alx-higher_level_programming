@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 """Fetching Info from a url"""
 from urllib import request
+
+
 if __name__ == "__main__":
     with request.urlopen('https://alx-intranet.hbtn.io/status') as R:
         p = R.read()

@@ -5,7 +5,8 @@ displays the value of the X-Request-Id variable"""
 import sys
 from urllib import request
 
-with request.urlopen(sys.argv[1]) as res:
-    p = res
+if __name__ == "__main__":
+    with request.urlopen(sys.argv[1]) as res:
+        p = res
 
-print(p.headers.get('X-Request-Id'))
+    print(p.headers.get('X-Request-Id'))

@@ -8,6 +8,6 @@ if __name__ == "__main__":
         p = R.read()
 
     print("Body response:")
-    print(f"\t - type: {type(p)}")
-    print(f"\t - content: {p}")
-    print(f"\t - utf8 content: {p.decode('utf8')}")
+    print(f"\t- type: {type(p)}")
+    print(f"\t- content: {p}")
+    print(f"\t- utf8 content: {p.decode('utf8')}")

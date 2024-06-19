@@ -33,8 +33,6 @@ fs.readFile(sourceFile1Path, 'utf8', (err, data1) => {
     fs.writeFile(destinationFilePath, concatenatedData, 'utf8', (err) => {
       if (err) {
         console.error(`Error writing to ${destinationFilePath}:`, err);
-      } else {
-        console.log(`Concatenated and wrote to ${destinationFilePath}`);
       }
     });
   });

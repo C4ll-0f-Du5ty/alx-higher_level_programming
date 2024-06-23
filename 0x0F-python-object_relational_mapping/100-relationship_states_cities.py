@@ -27,15 +27,15 @@ def main(username, password, dbname):
         session.commit()
 
         # print("State and City added successfully.")
-    except Exception as e:
-        print(f"An error occurred: {e}")
+    # except Exception as e:
+    #     print(f"An error occurred: {e}")
     finally:
         session.close()
 
 
 if __name__ == "__main__":
-    if len(sys.argv) != 4:
-        print("Usage: python 100-relationship_states_cities.py "
-              "<mysql_username> <mysql_password> <database_name>")
-    else:
-        main(sys.argv[1], sys.argv[2], sys.argv[3])
+    # if len(sys.argv) != 4:
+    #     print("Usage: python 100-relationship_states_cities.py "
+    #           "<mysql_username> <mysql_password> <database_name>")
+    # else:
+    main(sys.argv[1], sys.argv[2], sys.argv[3])

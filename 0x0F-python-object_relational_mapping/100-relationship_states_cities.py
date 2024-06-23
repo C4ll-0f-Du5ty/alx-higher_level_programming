@@ -13,25 +13,24 @@ def main(username, password, dbname):
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    try:
-        # Create the tables if they don't exist
-        Base.metadata.create_all(engine)
+    # Create the tables if they don't exist
+    Base.metadata.create_all(engine)
 
-        # Add a new state
-        california = State(name="California")
-        session.add(california)
-        session.commit()
+    # Add a new state
+    california = State(name="California")
+    session.add(california)
+    session.commit()
 
-        # Add a new city linked to the state
-        san_francisco = City(name="San Francisco", state_id=california.id)
-        session.add(san_francisco)
-        session.commit()
+    # Add a new city linked to the state
+    san_francisco = City(name="San Francisco", state_id=california.id)
+    session.add(san_francisco)
+    session.commit()
 
-        # print("State and City added successfully.")
+    # print("State and City added successfully.")
     # except Exception as e:
     #     print(f"An error occurred: {e}")
-    finally:
-        session.close()
+
+    session.close()
 
 
 if __name__ == "__main__":

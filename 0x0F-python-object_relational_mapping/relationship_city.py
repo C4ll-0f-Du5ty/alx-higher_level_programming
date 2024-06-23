@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 """A database for Cities"""
-from sqlalchemy import Integer, create_engine, Column, String, ForeignKey
+from sqlalchemy import Integer, Column, String, ForeignKey
 from relationship_state import Base, State
-from sqlalchemy.orm import relationship
+# from sqlalchemy.orm import relationship
 
 
 class City(Base):

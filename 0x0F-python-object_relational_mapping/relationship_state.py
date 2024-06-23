@@ -1,10 +1,11 @@
 #!/usr/bin/python3
 """To Make a State Table in my database"""
 from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy import Column, Integer, String, ForeignKey
+from sqlalchemy import Column, Integer, String, MetaData
 from sqlalchemy.orm import relationship
 
-Base = declarative_base()
+mymetadata = MetaData()
+Base = declarative_base(MetaData=mymetadata)
 
 
 class State(Base):

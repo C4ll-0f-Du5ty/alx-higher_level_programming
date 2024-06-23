@@ -5,8 +5,8 @@ from sqlalchemy.orm import sessionmaker
 from relationship_city import City, Base
 from relationship_state import State
 
-
-def main(username, password, dbname):
+# def main(username, password, dbname):
+if __name__ == "__main__":
     engine = create_engine("mysql+mysqldb://{}:{}@localhost:3306/{}"
                            .format(sys.argv[1], sys.argv[2],
                                    sys.argv[3]), pool_pre_ping=True)
@@ -33,11 +33,8 @@ def main(username, password, dbname):
     #     print(f"An error occurred: {e}")
 
     session.close()
-
-
-if __name__ == "__main__":
     # if len(sys.argv) != 4:
     #     print("Usage: python 100-relationship_states_cities.py "
     #           "<mysql_username> <mysql_password> <database_name>")
     # else:
-    main(sys.argv[1], sys.argv[2], sys.argv[3])
+    # main(sys.argv[1], sys.argv[2], sys.argv[3])

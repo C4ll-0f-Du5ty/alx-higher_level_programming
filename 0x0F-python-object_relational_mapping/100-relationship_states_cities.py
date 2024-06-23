@@ -7,8 +7,9 @@ from relationship_state import State
 
 
 def main(username, password, dbname):
-    engine = create_engine(f'mysql+pymysql://\
-        {username}:{password}@localhost:3306/{dbname}')
+    engine = create_engine("mysql+mysqldb://{}:{}@localhost:3306/{}"
+                           .format(sys.argv[1], sys.argv[2],
+                                   sys.argv[3]), pool_pre_ping=True)
     Session = sessionmaker(bind=engine)
     session = Session()
 

@@ -8,7 +8,7 @@ if __name__ == "__main__":
                           user=sys.argv[1],
                           passwd=sys.argv[2],
                           db=sys.argv[3])
-    command = "Select * from states order by id ASC"
+    command = "SELECT * FROM states WHERE name LIKE 'N%'"
     cursor = con.cursor()
     cursor.execute(command)
     rows = cursor.fetchall()

@@ -18,13 +18,14 @@ if __name__ == "__main__":
 
     # Add a new state
     california = State(name="California")
-    session.add(california)
 
     # Add a new city linked to the state
-    san_francisco = City(name="San Francisco", state_id=california.id)
-    session.add(san_francisco)
-
+    # san_francisco = City(name="San Francisco", state_id=california.id)
+    san_francisco = City(name="San Francisco")
     california.cities.append(san_francisco)
+
+    session.add(california)
+    session.add(san_francisco)
 
     session.commit()
 

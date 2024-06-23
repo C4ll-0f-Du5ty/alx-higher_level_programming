@@ -26,7 +26,7 @@ def main(username, password, dbname):
         session.add(san_francisco)
         session.commit()
 
-        print("State and City added successfully.")
+        # print("State and City added successfully.")
     except Exception as e:
         print(f"An error occurred: {e}")
     finally:

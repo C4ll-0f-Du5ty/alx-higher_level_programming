@@ -19,11 +19,13 @@ def main(username, password, dbname):
     # Add a new state
     california = State(name="California")
     session.add(california)
-    session.commit()
 
     # Add a new city linked to the state
     san_francisco = City(name="San Francisco", state_id=california.id)
     session.add(san_francisco)
+
+    california.cities.append(san_francisco)
+
     session.commit()
 
     # print("State and City added successfully.")

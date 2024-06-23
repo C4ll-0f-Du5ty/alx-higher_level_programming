@@ -33,7 +33,7 @@ if __name__ == "__main__":
     # except Exception as e:
     #     print(f"An error occurred: {e}")
 
-    # session.close()
+    session.close()
     # if len(sys.argv) != 4:
     #     print("Usage: python 100-relationship_states_cities.py "
     #           "<mysql_username> <mysql_password> <database_name>")

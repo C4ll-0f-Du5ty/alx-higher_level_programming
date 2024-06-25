@@ -12,6 +12,10 @@ if __name__ == "__main__":
     cursor = con.cursor()
     cursor.execute(command, (sys.argv[4],))
     rows = cursor.fetchall()
+    l = len(rows)
     for r in rows:
-        print(r)
+        print(r[0], end="")
+        print(", " if l > 1 else "", end="")
+        l -=1
+    print()
     con.close()

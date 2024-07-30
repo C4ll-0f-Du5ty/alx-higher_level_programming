@@ -12,17 +12,15 @@ request('https://swapi-api.alx-tools.com/api/films/' + args[2], (error, response
 );
 
 function printSynchronous (characters, index) {
-  for (const s of characters) {
-    request(s, (error, response, body) => {
+    request(characters[index], (error, response, body) => {
       if (error) {
         console.error(error);
       } else {
         console.log(JSON.parse(body).name);
-        if (index < characters.length) {
-          index++;
+        if (index + 1 < characters.length) {
+          printSynchronous(characters, ++index)
         }
       }
     }
     );
-  }
 }

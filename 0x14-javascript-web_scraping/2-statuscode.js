@@ -6,6 +6,6 @@ request(args[2], (error, response) => {
     console.error(error);
     return;
   }
-  console.log(response.statusCode);
+  console.log('code:', response.statusCode);
 }
 );

@@ -7,12 +7,10 @@ $(document).ready(function () {
     });
 
     function fetchTranslation() {
-        const language_code = $("INPUT#language_code").val();
-        $.getJSON(
-            `https://fourtonfish.com/hellosalut/hello/?lang=${language_code}`,
-            function (data) {
-                $("#hello").text(data.hello);
-            }
-        );
+        const link = "https://hellosalut.stefanbohacek.dev/?lang="
+        const lang = $("INPUT#language_code").val()
+        $.getJSON(link + lang, function (data) {
+            $("DIV#hello").text(data.hello)
+        })
     }
 });
